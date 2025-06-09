@@ -6,6 +6,8 @@ import { CardGroup } from '../Layout.js';
 
 import '../../assets/Deck.css';
 
+import card_back_img from './img/card_back.png';
+
 const Deck = ({ remainingCards, trumpCard }) => {
   return (
     <CardGroup className="p-2 p-md-4 h-100">
@@ -24,7 +26,7 @@ const Deck = ({ remainingCards, trumpCard }) => {
               <div key={`deck-card-column-${index+1}`} style={{ overflowY: 'visible', overflowX: 'auto', scrollbarWidth: 'none', width: `50%`, marginLeft: `${offset}vw`, gridColumn: '1', gridRow: '1' }}>
                 <Card
                   cardID={`deck-card-${index+1}`}
-                  cardData={{ image: 'https://deckofcardsapi.com/static/img/back.png', isVisible: true }}
+                  cardData={{ image: card_back_img, isVisible: true }}
                 />
               </div>
             );

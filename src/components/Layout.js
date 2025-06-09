@@ -36,8 +36,8 @@ const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border: 3px solid #262722;
-  border-radius: 10px;
+  border: 4px solid #262722;
+  border-radius: 20px;
   margin: 0.25rem auto;
   box-shadow: 5px 5px;
   transition: height 0.3s ease;

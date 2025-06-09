@@ -6,6 +6,8 @@ import { Score, CardGroup } from '../Layout.js';
 import Card from './Card';
 import socket from '../../socket.js';
 
+import card_back_img from './img/card_back.png';
+
 const PlayerComponent = ({ playerName, playerPoints, playerCards, isPlayer, isTurn = false }) => {
     const { roomID } = useParams();
 
@@ -29,7 +31,7 @@ const PlayerComponent = ({ playerName, playerPoints, playerCards, isPlayer, isTu
                             <Col key={`card-column-${index}`}>
                                 <Card
                                     cardID={ isPlayer ? `player-card-${index+1}` : `opponent-card-${index+1}`}
-                                    cardData={ isPlayer ? data : data && { image: 'https://deckofcardsapi.com/static/img/back.png', isVisible: true } }
+                                    cardData={ isPlayer ? data : data && { image: card_back_img, isVisible: true } }
                                     onClick={ isPlayer ? () => handleCardSelection(data, index) : () => {} }
                                     enableHover={ isPlayer && isTurn ? true : false }
                                 ></Card>
